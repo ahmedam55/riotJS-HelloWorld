@@ -22,18 +22,18 @@ var mixins = {
         }
 
         var invalidFormat = function(currentValue) {
-        	var inputNumbers = currentValue.replace(/\D/g, '');
-        	if(inputNumbers[0]>3)
-        		return true
-        	if(inputNumbers.slice(0,2)>31)
-        		return true
-        	if(inputNumbers[2]>1)
-        		return true
-        	if(inputNumbers.slice(2,4)>12)
-        		return true
-        	if(inputNumbers.slice(4,8)>(new Date().getFullYear()))
-        		return true
-        	return false
+            var inputNumbers = currentValue.replace(/\D/g, '');
+            if (inputNumbers[0] > 3)
+                return true
+            if (inputNumbers.slice(0, 2) > 31)
+                return true
+            if (inputNumbers[2] > 1)
+                return true
+            if (inputNumbers.slice(2, 4) > 12)
+                return true
+            if (inputNumbers.slice(4, 8) > (new Date().getFullYear()))
+                return true
+            return false
         }
 
         var isDeleting = function(currentValue) {
@@ -43,7 +43,7 @@ var mixins = {
         }
 
         var returnInputPreviousValue = function() {
-            e.target.value = mixins.phoneMaskPrevoiusValue || currentValue
+            e.target.value = mixins.phoneMaskPrevoiusValue || ''
         }
 
         var addForwardSlash = function() {
@@ -59,7 +59,6 @@ var mixins = {
             if (containsOnlyTwoNumbersSlashAndTwoNumbers(currentValue))
                 addForwardSlash()
         }
-
 
         mixins.phoneMaskPrevoiusValue = e.target.value
     }
