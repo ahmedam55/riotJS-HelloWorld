@@ -1,5 +1,5 @@
 <result>
-	<div>
+	<div onclick={goToDetails}>
 		<h2 class="title">{item.title}</h2>
 		<span class="link"><a href="http://{item.link}">{item.link}</a></span>
 		<p class="desc">{item.desc}</p>
@@ -27,5 +27,8 @@
 </style>
 	<script>
 		this.item=this.opts.result;
+		goToDetails(){
+			riot.route('page/'+this.opts.index)
+		}
 	</script>
 </result>

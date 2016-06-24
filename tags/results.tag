@@ -1,6 +1,6 @@
 <results>	
-	<div each={result in filteredResults}>
-		<result result={result}/>
+	<div each={result, i in filteredResults}>
+		<result result={result} index={i}/>
 	</div>
 	<script>
 	this.filteredResults=[];
@@ -10,7 +10,7 @@
 	}
 	this.parent.on('inputChanged',function(value){
 		if(value)
-			that.filteredResults=that.parent.data.filter(function(item){
+			that.filteredResults=googleData.filter(function(item){
 				return item.title.contains(value)||item.desc.contains(value)|| item.link.contains(value)
 			})
 		else
