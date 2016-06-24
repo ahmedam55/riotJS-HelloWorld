@@ -1,12 +1,18 @@
 <auto-complete-input>
+    <p>
+      <input type="text" oninput={ change } value={ query }>
+  </p>
+  <script>
+    var that=this
+    this.parent.on('resultsFiltered',function(query){
+        that.query=query
+        that.update()
+    })
 
-<p>
-  <input type="text" oninput={ change } >
-</p>
-<script>
-  change(e){
-    this.parent.trigger('inputChanged',e.target.value)
-  }
+    change(e){
+        riot.route(e.target.value)
+    }
+
 </script>
 </auto-complete-input>
 

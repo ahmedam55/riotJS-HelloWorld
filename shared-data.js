@@ -1,4 +1,7 @@
-googleData=[
+var currentPage;
+var previousPage;
+
+var googleData=[
   {title:'Egypt',desc:'mother of the world',link:'www.egypt.eg'},
   {title:'Dubai',desc:'capital of beauty',link:'www.dubai.ae'},
   {title:'Cairo',desc:'The most crowded ever',link:'www.cairo.eg'},
