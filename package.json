@@ -1,0 +1,19 @@
+{
+  "name": "riotjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "timer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "browser-sync": "node_modules\\.bin\\browser-sync start --server --files \"**/*.html,**/*.css,**/*.js\"",
+    "riot": "node_modules\\.bin\\riot tags . --w",
+    "start": "node_modules\\.bin\\parallelshell \"npm run browser-sync\" \"npm run riot\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.13.0",
+    "parallelshell": "^2.0.0",
+    "riot": "^2.4.1"
+  }
+}
