@@ -2,6 +2,7 @@
 
 
 <form action="">
+<!-- <yield/> -->
   <input type="text" oninput={ preventNonNumbers } onblur={notValid} >
   <span show={notValid}>I can see you writing non-numeric chars</span>
   <input type="text" value={egp} oninput={phoneMask} >{consoleV}
@@ -9,7 +10,7 @@
 <a href="#/apply" onclick={prevent}>aaa</a>
 <script>
 Event.prototype.args=function(str){
-return this.target.dataset[str];
+  return this.target.dataset[str];
 }
 
 this.mixin(mixins)
@@ -20,5 +21,13 @@ this.mixin(mixins)
   // preventNonNumbers(e){
   //   this.notValid=!this.notValid
   // }
+
+
 </script>
+<style scoped>
+   form{
+    color:red;
+   }
+
+  </style>
 </todo>

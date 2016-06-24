@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "browser-sync": "node_modules\\.bin\\browser-sync start --server --files \"**/*.html,**/*.css,**/*.js\"",
-    "riot": "node_modules\\.bin\\riot tags . --w",
+    "riot": "node_modules\\.bin\\riot tags all.js --w",
     "start": "node_modules\\.bin\\parallelshell \"npm run browser-sync\" \"npm run riot\""
   },
   "author": "",
