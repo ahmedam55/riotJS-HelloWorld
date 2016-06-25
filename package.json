@@ -4,16 +4,17 @@
   "description": "",
   "main": "timer.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "browser-sync": "node_modules\\.bin\\browser-sync start --server --files \"**/*.html,**/*.css,**/*.js\"",
-    "riot": "node_modules\\.bin\\riot tags all.js --w",
-    "start": "node_modules\\.bin\\parallelshell \"npm run browser-sync\" \"npm run riot\""
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "browser-sync": "^2.13.0",
-    "parallelshell": "^2.0.0",
+    "del": "^2.2.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-riot": "^0.5.1",
+    "gulp-uglify": "^1.5.4",
     "riot": "^2.4.1"
   }
 }
