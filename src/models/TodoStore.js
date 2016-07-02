@@ -22,5 +22,5 @@ function TodoStore() {
     }
 
 
-    riot.observable(this)
+    // riot.observable(this)
 }

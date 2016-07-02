@@ -61,5 +61,17 @@ var mixins = {
         }
 
         mixins.phoneMaskPrevoiusValue = e.target.value
+    },
+    ngModel: function() {
+        var that = this;
+        document.querySelectorAll('[ng-model]').forEach(function(item) {
+            var model = item.getAttribute('ng-model');
+            that[model]=null;
+            item.oninput = function(e) {
+                that[model] = e.target.value;
+                that.update();
+            }
+        })
     }
+
 }

@@ -40,7 +40,7 @@ gulp.task('copy',function() {
 })
 
 gulp.task('watch',function(){
-    gulp.watch(['src/**/*.tag','src/scripts/*.js'],['concat-uglify-js','clean'])
+    gulp.watch(['src/**/*.tag','src/**/*.js'],['concat-uglify-js','clean'])
     gulp.watch(['src/index.html','src/styles/*.*'],['copy'])
 })
 

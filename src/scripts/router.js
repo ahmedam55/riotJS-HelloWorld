@@ -6,6 +6,7 @@ var riotMount=riot.mount;
 riot.mount=function(){
 	var tags = riotMount.apply(this,arguments);
 	currentPage = tags[0]
+	activateMixins();
 	return tags
 }
 
@@ -25,7 +26,11 @@ riot.route(function(query) {
 
 })
 
-
+var activateMixins = function(){
+	
+	currentPage.mixin(mixins);
+	currentPage.ngModel();
+}
 
 
 
